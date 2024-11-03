@@ -23,15 +23,15 @@ header nav a {
 /* Keyframes for scaling and color animation of brand */
 @keyframes scaleColorAnimation {
     0% {
-        transform: scale(1);
+        /* transform: scale(1); */
         color: #ffffff; 
     }
     50% {
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
         color: #8f6bd2; 
     }
     100% {
-        transform: scale(1);
+        /* transform: scale(1); */
         color: #ffffff; 
     }
 }

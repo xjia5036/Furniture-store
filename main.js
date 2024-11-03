@@ -24,3 +24,24 @@ $(document).ready(function() {
     });
 });
 
+// Initialize AOS (Animate on Scroll) library with custom settings 
+    AOS.init({
+        duration: 2000,  
+        once: false,     
+    });
+
+
+$(document).ready(function() {
+    // Initialize Glide.js for the hero section carousel 
+    const glide = new Glide('.glide', {
+        type: 'carousel',
+        autoplay: 2500,
+        hoverpause: true,
+        perView: 1,
+    });
+    glide.mount(); // Mount the glide instance
+});
+
+
+
+

@@ -11,9 +11,10 @@
     
     
     <!-- Glide.js for Hero Carousel -->
+    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css" />
     <!-- AOS for Animations -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Lightbox CSS -->
     <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
     <!-- Bootstrap CSS for responsive layout and components -->
@@ -29,7 +30,7 @@
                 <a id="burgerLink">
                     <img id="burger" alt="burger icon" src="images/burger-menu.png"/>
                 </a>
-                <h1 class="animated-title" data-aos="zoom-in">Dohia</h1>
+                <h1 class="animated-title" data-aos="flip-left">Dohia</h1>
             </div>
             <!-- navigation -->
             <ul>
@@ -183,35 +184,13 @@
     </footer>
     
     <!-- External Libraries  -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- External Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="node_modules/lightbox2/dist/js/lightbox.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-
-    
-
-    
-    <script src="main.js"></script>
-
-    <!-- Initialize AOS (Animate on Scroll) library with custom settings -->
-    <script>
-        AOS.init({
-            duration: 2000,  
-            once: false,     
-        });
-    </script>
-    <!-- Initialize Glide.js for the hero section carousel -->
-    <script>
-        const glide = new Glide('.glide', {
-            type: 'carousel',
-            autoplay: 2500,
-            hoverpause: true,
-            perView: 1,
-        });
-        glide.mount(); // Mount the glide instance
-    </script>
-
-    
+    <script src="main.js"></script>   
 </body>
 </html>
