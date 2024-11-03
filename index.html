@@ -3,9 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    
+    <!-- Glide.js for Hero Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css" />
+    <!-- AOS for Animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- Lightbox CSS -->
+    <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
+    <!-- Bootstrap CSS for responsive layout and components -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Furniture Store</title>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <!-- logo and brand -->
+        <nav>
+            <div>
+                <a id="burgerLink">
+                    <img id="burger" alt="burger icon" src="images/burger-menu.png"/>
+                </a>
+                <h1 class="animated-title" data-aos="zoom-in">Dohia</h1>
+            </div>
+            <!-- navigation -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#story">Dohia Stories</a></li>
+                <li><a href="#showroom">Showroom</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <!-- image 1 -->
+                <li class="glide__slide">
+                    <a class="image-container" href="">
+                        <img src="images/bed 1.jpeg" alt="Furniture 1">
+                        <div class="info-overlay">
+                            <h2 class="product-name">Loft bed with storage</h2>
+                            <h3 class="product-price">$1099.99</h3>
+                        </div>
+                    </a>
+                </li>
+                <!-- image 2 -->
+                <li class="glide__slide">
+                    <a class="image-container" href="">
+                        <img src="images/bed 2.jpeg" alt="Furniture 2">
+                        <div class="info-overlay">
+                            <h2 class="product-name">Twin over full bunk bed</h2>
+                            <h3 class="product-price">$1299.99</h3>
+                        </div>
+                    </a>
+                </li>
+                <!-- image 3 -->
+                <li class="glide__slide">
+                    <a class="image-container" href="">
+                        <img src="images/bed 3.jpeg" alt="Furniture 3">
+                        <div class="info-overlay">
+                            <h2 class="product-name">Desk and bookshelf combo</h2>
+                            <h3 class="product-price">$899.99</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- image 4 -->
+            <div class="product-item">
+                <a href="images/bed 6.jpeg" data-lightbox="products">
+                    <img src="images/bed 6.jpeg" alt="Product 6">
+                </a>
+                <div class="product-info">
+                    <h3 class="product-name">
+                        <a href="">Twin over full bunk bed</a>
+                    </h3>
+                    <p class="product-price">$1199.99</p>
+                </div>
+            </div>
+            <!-- image 5 -->
+            <div class="product-item">
+                <a href="images/bed 7.jpeg" data-lightbox="products">
+                    <img src="images/bed 7.jpeg" alt="Product 7">
+                </a>
+                <div class="product-info">
+                    <h3 class="product-name">
+                        <a href="">Girls' twin bed</a>
+                    </h3>
+                    <p class="product-price">$429.99</p>
+                </div>
+            </div>
+            <!-- image 6 -->
+            <div class="product-item">
+                <a href="images/bed 8.jpeg" data-lightbox="products">
+                    <img src="images/bed 8.jpeg" alt="Product 8">
+                </a>
+                <div class="product-info">
+                    <h3 class="product-name">
+                        <a href="product3-details.html">Boys' twin bed</a>
+                    </h3>
+                    <p class="product-price">$399.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <footer>
+        <div class="footer-content">
+            <!-- Contact Form Section -->
+            <section id="contact" class="contact-form">
+                <h4>Contact Us</h4>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" autocomplete="off" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+    
+            <!-- Links Section -->
+            <div class="footer-links">
+                <!-- column 1 -->
+                <div class="footer-section about-us">
+                    <h5>THE DREAM FACTORY</h5>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#dohia">Dohia</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#commitment">Commitment</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                    </ul>
+                </div>
+                <!-- column 2 -->
+                <div class="footer-section customer-care">
+                    <h5>CUSTOMER CARE</h5>
+                    <ul>
+                        <li><a href="#payment">Payment Methods</a></li>
+                        <li><a href="#delivery">Time of Delivery</a></li>
+                        <li><a href="#returns">Returns & Refunds</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- column 3 -->
+                <div class="footer-section professional">
+                    <h5>PROFESSIONAL</h5>
+                    <ul>
+                        <li><a href="#press">Press Room</a></li>
+                        <li><a href="#horeca">Horeca & Contract</a></li>
+                        <li><a href="#commercial">Commercial Contacts</a></li>
+                        <li><a href="#dealers">Dealers Area</a></li>
+                        <li><a href="#work">Work with us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- External Libraries  -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="node_modules/lightbox2/dist/js/lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+    
+
+    
+    <script src="main.js"></script>
+
+    <!-- Initialize AOS (Animate on Scroll) library with custom settings -->
+    <script>
+        AOS.init({
+            duration: 2000,  
+            once: false,     
+        });
+    </script>
+    <!-- Initialize Glide.js for the hero section carousel -->
+    <script>
+        const glide = new Glide('.glide', {
+            type: 'carousel',
+            autoplay: 2500,
+            hoverpause: true,
+            perView: 1,
+        });
+        glide.mount(); // Mount the glide instance
+    </script>
+
     
 </body>
 </html>

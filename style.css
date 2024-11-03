@@ -1,0 +1,358 @@
+/* General styles */
+
+/* body styles */
+body {
+    width: 100vw;
+    background-color: white;
+    font-family: "Inter", serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+}
+/* Header styles */
+header {
+    background: #333;
+    color: #fff; 
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Keyframes for scaling and color animation of brand */
+@keyframes scaleColorAnimation {
+    0% {
+        transform: scale(1);
+        color: #ffffff; 
+    }
+    50% {
+        transform: scale(1.2);
+        color: #8f6bd2; 
+    }
+    100% {
+        transform: scale(1);
+        color: #ffffff; 
+    }
+}
+
+/* Hero syles */
+.hero {
+    width: 100%; 
+    height: auto;
+    overflow: hidden; 
+    position: relative; 
+    transform: translateY(-15%); 
+    clip-path: inset(15% 0 10% 0); 
+}
+
+.glide__slide img {
+    width: 100%; 
+    height: auto; 
+    margin-top: 0;
+}
+
+.glide__slide {
+    position: relative; 
+}
+
+.image-container {
+    display: block; 
+    position: relative; 
+}
+/* info on hero image */
+.info-overlay {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+/* info hover */
+.image-container:hover .info-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* product styles */
+
+#products {
+    transform: translateY(-6%);
+    
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;    
+}
+
+.product-item {
+    flex: 1 1 calc(33.333% - 20px); /* Set width to one third minus gap */
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+.product-item img {
+    display: block;
+    width: 100%; 
+}
+
+.product-info {
+    background-color: black; 
+}
+
+.product-name {
+    font-size: 1.2em; 
+
+}
+
+.product-name a {
+    text-decoration: none; 
+    color: white;
+}
+
+#products .product-price {
+    font-size: 1em; 
+    color: white;
+    margin-bottom:0;
+    
+}
+
+#products .product-info {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/* footer styles */
+.btn.btn-primary {
+    width: 100%;
+    font-weight: bold;
+    background-color: black; 
+    border-color: black; 
+}
+
+.btn.btn-primary:hover {
+    background-color: #333; 
+    border-color: #333;
+}
+
+
+
+/* Mobile section */
+@media (max-width: 414px) {
+
+    header nav div {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        
+    }
+    #burgerLink {
+        display: flex;
+        flex-direction: center;
+    }
+    #burger {
+        width:25px;
+        height: auto;
+        padding-left: 10px;
+    }
+    /* logo animation */
+    .animated-title {
+        animation: scaleColorAnimation 3s infinite; /* Infinite looping animation */
+        padding-left:120px;
+        font-size: 40px;
+    }
+    header nav ul {
+        display: none;
+    }
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    /* product section */
+    #products {
+        margin-top: 15px;
+    }
+    #products h2 {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 0px; 
+    }
+
+    .product-item {
+        flex: 1 1 100%; 
+    }
+
+    /* footer section */
+    footer {
+        transform: translateY(-8%);
+        margin-left: 10px;
+    }
+
+    
+    .footer-section {
+        margin-bottom: 20px;
+
+    }
+    .footer-links a {
+        text-decoration: none; 
+        color: inherit; 
+    }
+    
+    .footer-links a:hover {
+        color: #8f6bd2; 
+        text-decoration: underline; 
+    }
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; 
+        gap:10px;
+    }
+    .footer-section h5 {
+        letter-spacing: 1.5px;
+    }
+
+    #contactForm {
+        margin-bottom: 50px;
+    }
+
+}
+/*Desktop section */
+@media (min-width: 414px) {
+
+    header {
+        height: 120px;
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+    h1 {
+        font-size: 40px;
+       
+    }
+    .animated-title {
+        animation: scaleColorAnimation 3s infinite; /* Infinite looping animation */
+        padding-left:0;
+    }
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header nav div {
+        display: flex;
+        align-items: center;
+    } 
+
+    header nav ul {
+        height: 120px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin:0;
+        padding:0;
+    }
+    
+    #burger {
+        display: none;
+    }
+
+
+    nav li {
+        margin: 0 2rem;
+    }
+
+    /* hero section */
+    #home {
+        width: 60%;
+        height: 60%;
+        margin: 0 auto;    
+    }
+
+    /* product section */
+    
+    #products {
+        padding: 0 40px;
+        transform: translateY(-20%);
+    }
+    h2 {
+        margin: 0;
+    }
+    #products h2 {
+        transform: translateY(-100%);
+
+    }
+
+    /* footer section */
+    footer {
+        transform: translateY(-10%);
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 100px;
+    }
+    #contact {
+        width: 25%;
+        margin-bottom: 30px;
+        margin-right: 50px;
+
+    }
+    #contact h4 {
+        margin-bottom: 10px;
+    }
+
+
+    .footer-links {
+        display: flex;
+        gap:100px;
+        margin-top: 5px;
+
+    }
+    .footer-links a {
+        text-decoration: none; 
+        color: inherit; 
+    }
+    
+    .footer-links a:hover {
+        color: #8f6bd2; 
+        text-decoration: underline; 
+    }
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none; 
+        padding: 0; 
+        margin: 0; 
+        gap:15px;
+    }
+
+    .footer-section h5 {
+        letter-spacing: 1.5px;
+        margin-bottom: 25px;
+    }
+    
+    
+
+
+
+
+}
+
